@@ -17,8 +17,8 @@ export function CvDownloadActions(): JSX.Element {
       transition={{ duration: 0.5, delay: 0.25 }}
     >
       <motion.a
-        href="/resume.pdf"
-        download="Nengxiong_Resume.pdf"
+        href="/nengxiong-wtx-cv.pdf"
+        download="Nengxiong_nengxiong-wtx-cv.pdf"
         className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-nx-purple to-nx-blue px-6 py-3 text-xs md:text-sm font-semibold text-white shadow-lg shadow-nx-purple/25 cursor-pointer"
         whileHover={{
           scale: 1.04,
@@ -32,7 +32,7 @@ export function CvDownloadActions(): JSX.Element {
       </motion.a>
 
       <motion.a
-        href="/resume.pdf"
+        href="/nengxiong-wtx-cv.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-xs md:text-sm font-medium text-zinc-300 backdrop-blur-sm hover:border-nx-purple/40 hover:text-white cursor-pointer"

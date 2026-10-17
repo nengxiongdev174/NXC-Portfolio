@@ -23,10 +23,17 @@ export function Footer(): JSX.Element {
           </div>
 
           <div className="flex gap-6 text-sm text-zinc-500">
-            {(["Facebook", "IG", "LINE"] as const).map((label) => (
+            {[
+              { label: "Facebook", href: "https://www.facebook.com/ChengLarXiong/" },
+              { label: "GitHub", href: "https://github.com/nengxiongdev174" },
+              { label: "WhatsApp", href: "https://api.whatsapp.com/send?phone=8562057492472" },
+              { label: "Line", href: "https://line.me/ti/p/BNpe9xpQkL" },
+            ].map(({ label, href }) => (
               <motion.a
                 key={label}
-                href="#"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="transition-colors cursor-pointer"
                 whileHover={{ y: -2, color: "#ffffff" }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
