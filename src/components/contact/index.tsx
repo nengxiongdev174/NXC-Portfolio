@@ -12,7 +12,7 @@ import { SuccessView } from "./SuccessView";
 type Status = "idle" | "loading" | "success" | "error";
 
 export function Contact(): JSX.Element {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState<Status>("idle");
 
@@ -27,7 +27,7 @@ export function Contact(): JSX.Element {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, locale }),
       });
       if (!res.ok) throw new Error();
       setStatus("success");
