@@ -3,9 +3,12 @@
 import type { JSX } from "react";
 import { motion } from "framer-motion";
 import { Separator } from "@/components/ui/separator";
-import { LogoBrand } from "@/components/LogoBrand";
+import { LogoBrand } from "@/components/shared/LogoBrand";
+import { useLanguage } from "@/context/LanguageContext";
 
-export default function Footer(): JSX.Element {
+export function Footer(): JSX.Element {
+  const { t } = useLanguage();
+
   return (
     <footer className="relative border-t border-white/6 px-6 pt-16 pb-8">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 h-px w-32 bg-linear-to-r from-transparent via-nx-purple/40 to-transparent" />
@@ -24,7 +27,7 @@ export default function Footer(): JSX.Element {
               <motion.a
                 key={label}
                 href="#"
-                className="transition-colors"
+                className="transition-colors cursor-pointer"
                 whileHover={{ y: -2, color: "#ffffff" }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
@@ -37,9 +40,11 @@ export default function Footer(): JSX.Element {
         <Separator className="bg-white/10" />
 
         <p className="mt-8 text-center text-sm text-zinc-700">
-          &copy; {new Date().getFullYear()} Nengxiong WANGTOUAXIONG. ສະຫງວນລິຂະສິດ.
+          &copy; {new Date().getFullYear()} Nengxiong WANGTOUAXIONG. {t("footer.allRightsReserved")}
         </p>
       </div>
     </footer>
   );
 }
+
+export default Footer;

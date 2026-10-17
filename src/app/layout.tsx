@@ -8,15 +8,29 @@ import "@fontsource/noto-sans-lao/500.css";
 import "@fontsource/noto-sans-lao/600.css";
 import "@fontsource/noto-sans-lao/700.css";
 
+import { LanguageProvider } from "@/context/LanguageContext";
+import { Inter, Noto_Sans_Thai } from "next/font/google";
+
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const notoSansThai = Noto_Sans_Thai({
+  variable: "--font-noto-sans-thai",
+  subsets: ["thai"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Nengxiong WANGTOUAXIONG — Portfolio",
   description:
-    "Portfolio ສ່ວນຕົວຂອງ Nengxiong WANGTOUAXIONG — Full-Stack Developer & Designer ຜູ້ສ້າງສັນ digital solutions ທີ່ສວຍງາມ",
+    "Portfolio of Nengxiong WANGTOUAXIONG — Full-Stack Developer & Designer creating elegant digital solutions",
   icons: {
     icon: "/nx-creations-logo.png",
     shortcut: "/nx-creations-logo.png",
@@ -37,11 +51,17 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="lo"
-      className={cn("h-full", "scroll-smooth", geistMono.variable)}
+      lang="en"
+      className={cn(
+        "h-full",
+        "scroll-smooth",
+        geistMono.variable,
+        inter.variable,
+        notoSansThai.variable
+      )}
     >
-      <body className="min-h-full flex flex-col bg-black text-white antialiased font-(family-name:--font-noto-sans-lao)">
-        {children}
+      <body className="min-h-full flex flex-col bg-black text-white antialiased font-sans">
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

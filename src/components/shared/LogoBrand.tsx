@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const LETTERS = "CREATIONS".split("");
 
-interface LogoBrandProps {
+export interface LogoBrandProps {
   href?: string;
   animateOnView?: boolean;
 }
@@ -67,3 +67,5 @@ export function LogoBrand({ href = "#", animateOnView = false }: LogoBrandProps)
     </motion.a>
   );
 }
+
+export default LogoBrand;
