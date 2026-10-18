@@ -6,7 +6,21 @@ import { useLanguage } from "@/context/LanguageContext";
 import { Download, ExternalLink } from "lucide-react";
 
 export function CvDownloadActions(): JSX.Element {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
+
+  const cvHref =
+    locale === "th"
+      ? "/nengxiong-wtx-cv-th.pdf"
+      : locale === "lo"
+      ? "/nengxiong-wtx-cv-la.pdf"
+      : "/nengxiong-wtx-cv-en.pdf";
+
+  const downloadName =
+    locale === "th"
+      ? "Nengxiong_CV_TH.pdf"
+      : locale === "lo"
+      ? "Nengxiong_CV_LA.pdf"
+      : "Nengxiong_CV_EN.pdf";
 
   return (
     <motion.div
@@ -17,8 +31,8 @@ export function CvDownloadActions(): JSX.Element {
       transition={{ duration: 0.5, delay: 0.25 }}
     >
       <motion.a
-        href="/nengxiong-wtx-cv.pdf"
-        download="Nengxiong_nengxiong-wtx-cv.pdf"
+        href={cvHref}
+        download={downloadName}
         className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-nx-purple to-nx-blue px-6 py-3 text-xs md:text-sm font-semibold text-white shadow-lg shadow-nx-purple/25 cursor-pointer"
         whileHover={{
           scale: 1.04,
@@ -32,7 +46,7 @@ export function CvDownloadActions(): JSX.Element {
       </motion.a>
 
       <motion.a
-        href="/nengxiong-wtx-cv.pdf"
+        href={cvHref}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-xs md:text-sm font-medium text-zinc-300 backdrop-blur-sm hover:border-nx-purple/40 hover:text-white cursor-pointer"
