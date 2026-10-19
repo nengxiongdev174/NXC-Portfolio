@@ -86,6 +86,13 @@ export default function MyComponent() {
 - `titleEn`, `titleTh`, `titleLo`
 - `descriptionEn`, `descriptionTh`, `descriptionLo`
 
+### 4) การจัดการไฟล์ CV ทั้ง 3 ภาษา (`public/`):
+ไฟล์ PDF ของประวัติการทำงาน (CV) ใน `public/` ต้องมีครบ 3 ภาษา:
+- `public/nengxiong-wtx-cv-en.pdf` (English - International Edition)
+- `public/nengxiong-wtx-cv-th.pdf` (ฉบับภาษาไทย)
+- `public/nengxiong-wtx-cv-la.pdf` (ສະບັບພາສາລາວ)
+- Component `CvDownloadActions.tsx` จะแสดงการ์ดทั้ง 3 ฉบับให้ผู้ใช้เลือกกดดู (`View`) และดาวน์โหลด (`Download`) ได้ทันที พร้อมไฮไลต์แท็บภาษาปัจจุบันที่ผู้ใช้เลือกอยู่
+
 ---
 
 ## 5. Checklist ก่อนส่งงาน (Validation Checklist)
