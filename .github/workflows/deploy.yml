@@ -43,4 +43,4 @@ jobs:
                       docker pull nxcreations/nxc-portfolio:latest
                       docker stop nxc-portfolio || true
                       docker rm nxc-portfolio || true
-                      docker run -d --name nxc-portfolio --restart always -p 9990:3000-e RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}-e CONTACT_TO_EMAIL=${{ secrets.CONTACT_TO_EMAIL }}-e CONTACT_FROM_EMAIL=${{ secrets.CONTACT_FROM_EMAIL }}nxcreations/nxc-portfolio:latest
+                      docker run -d --name nxc-portfolio --restart always -p 9990:3000-e RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}-e CONTACT_TO_EMAIL=${{ secrets.CONTACT_TO_EMAIL }}-e CONTACT_FROM_EMAIL="${{ secrets.CONTACT_FROM_EMAIL }}" nxcreations/nxc-portfolio:latest
