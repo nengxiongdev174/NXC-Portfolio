@@ -22,8 +22,8 @@ jobs:
         with:
           context: .
           push: true
-          # ⚠️ อย่าลืมเปลี่ยน YOUR_DOCKER_USERNAME เป็นชื่อบัญชี Docker Hub ของคุณ
-          tags: YOUR_DOCKER_USERNAME/nxc-portfolio:latest
+          # ⚠️ อย่าลืมเปลี่ยน nxcreations เป็นชื่อบัญชี Docker Hub ของคุณ
+          tags: nxcreations/nxc-portfolio:latest
 
   deploy:
     needs: build-and-push
@@ -36,7 +36,7 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            docker pull YOUR_DOCKER_USERNAME/nxc-portfolio:latest
+            docker pull nxcreations/nxc-portfolio:latest
             docker stop nxc-portfolio || true
             docker rm nxc-portfolio || true
-            docker run -d --name nxc-portfolio --restart always -p 8080:3000 YOUR_DOCKER_USERNAME/nxc-portfolio:latest
+            docker run -d --name nxc-portfolio --restart always -p 8080:3000 nxcreations/nxc-portfolio:latest
