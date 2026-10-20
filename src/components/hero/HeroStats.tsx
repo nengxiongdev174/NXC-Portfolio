@@ -8,8 +8,8 @@ export function HeroStats(): JSX.Element {
   const { t } = useLanguage();
 
   const stats = [
-    { value: "50+", label: t("hero.stats.projects") },
-    { value: "3+", label: t("hero.stats.experience") },
+    { value: "10+", label: t("hero.stats.projects") },
+    { value: "2+", label: t("hero.stats.experience") },
     { value: "10+", label: t("hero.stats.techStack") },
     { value: "4.9", label: t("hero.stats.rating") },
   ];
