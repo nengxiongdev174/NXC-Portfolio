@@ -97,4 +97,8 @@ export const th: TranslationSchema = {
     tagline: "Full-Stack Developer & Designer",
     allRightsReserved: "สงวนลิขสิทธิ์ทั้งหมด.",
   },
+  theme: {
+    toggleToDark: "เปลี่ยนเป็นโหมดมืด",
+    toggleToLight: "เปลี่ยนเป็นโหมดสว่าง",
+  },
 };

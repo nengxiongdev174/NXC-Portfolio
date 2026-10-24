@@ -43,7 +43,7 @@ export function Experience(): JSX.Element {
           </motion.h2>
 
           <motion.p
-            className="mx-auto mb-8 max-w-xl text-sm leading-relaxed text-zinc-400"
+            className="mx-auto mb-8 max-w-xl text-sm leading-relaxed text-muted-foreground"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

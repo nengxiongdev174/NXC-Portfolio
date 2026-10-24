@@ -14,7 +14,7 @@ export function BioCard(): JSX.Element {
       viewport={{ once: true }}
       transition={{ duration: 0.7 }}
     >
-      <div className="relative overflow-hidden rounded-xl border border-white/8 bg-zinc-900/60 p-8 backdrop-blur-sm">
+      <div className="relative overflow-hidden rounded-xl border border-border bg-card/90 p-8 backdrop-blur-sm shadow-xs transition-all duration-300 dark:border-white/8 dark:bg-zinc-900/60">
         <div className="absolute top-3 left-3 h-4 w-4 border-t border-l border-nx-purple/40" />
         <div className="absolute top-3 right-3 h-4 w-4 border-t border-r border-nx-purple/40" />
         <div className="absolute bottom-3 left-3 h-4 w-4 border-b border-l border-nx-purple/40" />
@@ -29,15 +29,15 @@ export function BioCard(): JSX.Element {
           <div className="shimmer-text mb-1 text-xl font-black tracking-tight">
             Nengxiong WANGTOUAXIONG
           </div>
-          <div className="font-mono text-[10px] tracking-[0.2em] text-zinc-500 uppercase">
+          <div className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground uppercase">
             Full-Stack Developer · Designer · Builder
           </div>
         </div>
 
-        <p className="mb-4 text-sm leading-relaxed text-zinc-400">
+        <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
           {t("about.bioP1")}
         </p>
-        <p className="mb-5 text-sm leading-relaxed text-zinc-400">
+        <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
           {t("about.bioP2")}
         </p>
 
@@ -54,8 +54,8 @@ export function BioCard(): JSX.Element {
             >
               <span className="mt-0.5 text-xs text-nx-purple">{h.icon}</span>
               <div>
-                <span className="text-sm font-semibold text-white">{h.title}</span>
-                <span className="ml-2 text-sm text-zinc-500">— {h.desc}</span>
+                <span className="text-sm font-semibold text-foreground">{h.title}</span>
+                <span className="ml-2 text-sm text-muted-foreground">— {h.desc}</span>
               </div>
             </motion.div>
           ))}

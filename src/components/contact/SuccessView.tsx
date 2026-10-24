@@ -64,13 +64,13 @@ export function SuccessView({ onReset }: { onReset: () => void }): JSX.Element {
       >
         // TRANSMISSION COMPLETE
       </motion.p>
-      <p className="text-lg font-semibold text-white">{t("contact.submitSuccess")}</p>
-      <p className="mt-1 text-sm text-zinc-500">
+      <p className="text-lg font-semibold text-foreground">{t("contact.submitSuccess")}</p>
+      <p className="mt-1 text-sm text-muted-foreground">
         {t("contact.quickResponse")}
       </p>
 
       <motion.button
-        className="mt-8 font-mono text-[9px] tracking-[0.25em] text-zinc-600 uppercase transition-colors hover:text-nx-purple cursor-pointer"
+        className="mt-8 font-mono text-[9px] tracking-[0.25em] text-muted-foreground uppercase transition-colors hover:text-nx-purple cursor-pointer"
         onClick={onReset}
         whileHover={{ letterSpacing: "0.35em" }}
         transition={{ duration: 0.2 }}

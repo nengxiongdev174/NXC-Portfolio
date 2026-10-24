@@ -64,7 +64,7 @@ export function Contact(): JSX.Element {
           <span className="gradient-text">{t("contact.headingHighlight")}</span>
         </motion.h2>
         <motion.p
-          className="mx-auto mb-12 max-w-lg text-sm text-zinc-500"
+          className="mx-auto mb-12 max-w-lg text-sm text-muted-foreground"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -81,15 +81,15 @@ export function Contact(): JSX.Element {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
         >
-          <div className="relative overflow-hidden rounded-xl border border-nx-purple/20 bg-zinc-900/70 backdrop-blur-sm">
+          <div className="relative overflow-hidden rounded-xl border border-border bg-card/90 shadow-sm backdrop-blur-sm dark:border-nx-purple/20 dark:bg-zinc-900/70">
             <div className="absolute top-3 left-3 h-4 w-4 border-t border-l border-nx-purple/50" />
             <div className="absolute top-3 right-3 h-4 w-4 border-t border-r border-nx-purple/50" />
             <div className="absolute bottom-3 left-3 h-4 w-4 border-b border-l border-nx-purple/50" />
             <div className="absolute bottom-3 right-3 h-4 w-4 border-b border-r border-nx-purple/50" />
 
             {/* Terminal Header */}
-            <div className="flex items-center justify-between border-b border-white/5 px-6 py-3">
-              <span className="font-mono text-[9px] tracking-[0.25em] text-zinc-600 uppercase">
+            <div className="flex items-center justify-between border-b border-border px-6 py-3 dark:border-white/5">
+              <span className="font-mono text-[9px] tracking-[0.25em] text-muted-foreground uppercase">
                 // SEND_TRANSMISSION
               </span>
               <div className="flex gap-1.5">

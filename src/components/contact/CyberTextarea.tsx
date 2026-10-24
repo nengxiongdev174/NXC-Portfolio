@@ -30,7 +30,7 @@ export function CyberTextarea({
       <label
         htmlFor={id}
         className={`mb-2 block text-sm font-medium transition-colors duration-200 ${
-          active ? "text-white" : "text-zinc-400"
+          active ? "text-foreground font-semibold" : "text-muted-foreground"
         }`}
       >
         {label}
@@ -44,13 +44,13 @@ export function CyberTextarea({
         onChange={onChange}
         onFocus={() => setFocused(true)}
         onBlur={() => setFocused(false)}
-        className="w-full resize-none rounded border bg-white/3 px-4 py-3 text-sm text-white placeholder:text-zinc-700 focus:outline-none transition-all duration-200"
+        className="w-full resize-none rounded-lg border bg-background/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none transition-all duration-200"
         style={{
           borderColor: focused
-            ? "rgba(147,51,234,0.45)"
-            : "rgba(255,255,255,0.06)",
+            ? "rgba(147,51,234,0.6)"
+            : "var(--border)",
           boxShadow: focused
-            ? "0 0 24px rgba(147,51,234,0.08), inset 0 0 16px rgba(147,51,234,0.03)"
+            ? "0 0 24px rgba(147,51,234,0.12), inset 0 0 16px rgba(147,51,234,0.04)"
             : "none",
         }}
       />

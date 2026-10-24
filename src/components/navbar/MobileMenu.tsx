@@ -32,14 +32,14 @@ export function MobileMenu({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
-          className="md:hidden border-t border-white/10 bg-black/95 backdrop-blur-md"
+          className="md:hidden border-t border-border bg-background/95 backdrop-blur-md dark:border-white/10 dark:bg-black/95"
         >
-          <ul className="flex flex-col items-center gap-4 px-6 py-6 text-sm font-medium text-zinc-400">
+          <ul className="flex flex-col items-center gap-4 px-6 py-6 text-sm font-medium text-zinc-600 dark:text-zinc-400">
             {navLinks.map((item) => (
               <li key={item.key}>
                 <a
                   href={item.href}
-                  className="transition-colors hover:text-white"
+                  className="transition-colors hover:text-zinc-950 dark:hover:text-white"
                   onClick={onClose}
                 >
                   {t(item.key)}

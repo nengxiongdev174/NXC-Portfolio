@@ -97,4 +97,8 @@ export const lo: TranslationSchema = {
     tagline: "Full-Stack Developer & Designer",
     allRightsReserved: "ສະຫງວນລິຂະສິດ.",
   },
+  theme: {
+    toggleToDark: "ປ່ຽນເປັນໂໝດມືດ",
+    toggleToLight: "ປ່ຽນເປັນໂໝດສະຫວ່າງ",
+  },
 };

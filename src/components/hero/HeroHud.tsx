@@ -7,8 +7,8 @@ export function HeroHud(): JSX.Element {
   return (
     <>
       {/* Top Left HUD */}
-      <div className="absolute top-24 left-6 hidden opacity-40 md:block pointer-events-none">
-        <div className="flex items-start gap-2 font-mono text-xs text-zinc-500">
+      <div className="absolute top-24 left-6 hidden opacity-70 dark:opacity-40 md:block pointer-events-none">
+        <div className="flex items-start gap-2 font-mono text-xs text-zinc-600 dark:text-zinc-500">
           <div className="flex flex-col items-start">
             <div className="flex items-center gap-1.5">
               <motion.span
@@ -18,7 +18,7 @@ export function HeroHud(): JSX.Element {
               />
               <span className="tracking-widest">PORTFOLIO v1.0</span>
             </div>
-            <span className="mt-0.5 tracking-widest text-zinc-600">NENGXIONG.DEV</span>
+            <span className="mt-0.5 tracking-widest text-zinc-500 dark:text-zinc-600">NENGXIONG.DEV</span>
           </div>
           <div className="flex flex-col items-start gap-1 pt-0.5">
             <div className="h-px w-12 bg-nx-purple/40" />
@@ -28,8 +28,8 @@ export function HeroHud(): JSX.Element {
       </div>
 
       {/* Top Right HUD */}
-      <div className="absolute top-24 right-6 hidden opacity-40 md:block pointer-events-none">
-        <div className="flex items-start gap-2 font-mono text-xs text-zinc-500 flex-row-reverse">
+      <div className="absolute top-24 right-6 hidden opacity-70 dark:opacity-40 md:block pointer-events-none">
+        <div className="flex items-start gap-2 font-mono text-xs text-zinc-600 dark:text-zinc-500 flex-row-reverse">
           <div className="flex flex-col items-end">
             <div className="flex items-center gap-1.5">
               <motion.span
@@ -39,7 +39,7 @@ export function HeroHud(): JSX.Element {
               />
               <span className="tracking-widest">SHOWCASE ◆</span>
             </div>
-            <span className="mt-0.5 tracking-widest text-zinc-600">DIGITAL WORKS</span>
+            <span className="mt-0.5 tracking-widest text-zinc-500 dark:text-zinc-600">DIGITAL WORKS</span>
           </div>
           <div className="flex flex-col items-end gap-1 pt-0.5">
             <div className="h-px w-12 bg-nx-purple/40 ml-auto" />

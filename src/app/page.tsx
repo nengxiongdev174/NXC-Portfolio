@@ -13,7 +13,7 @@ import {
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-nx-dark text-white overflow-x-hidden">
+    <main className="relative min-h-screen bg-background text-foreground transition-colors duration-300 overflow-x-hidden">
       <Navbar />
       <Hero />
       <Projects />

@@ -23,10 +23,10 @@ export function SkillBar({
       transition={{ duration: 0.5, delay: index * 0.08 }}
     >
       <div className="mb-1.5 flex items-center justify-between">
-        <span className="text-sm text-zinc-300">{name}</span>
-        <span className="font-mono text-xs text-zinc-500">{level}%</span>
+        <span className="text-sm font-medium text-foreground/90 dark:text-zinc-300">{name}</span>
+        <span className="font-mono text-xs text-muted-foreground">{level}%</span>
       </div>
-      <div className="h-1.5 overflow-hidden rounded-full bg-white/8">
+      <div className="h-1.5 overflow-hidden rounded-full bg-muted dark:bg-white/8">
         <motion.div
           className="h-full rounded-full"
           style={{ background: `linear-gradient(90deg, ${color}, ${color}99)` }}

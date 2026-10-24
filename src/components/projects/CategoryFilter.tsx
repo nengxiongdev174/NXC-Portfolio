@@ -30,7 +30,7 @@ export function CategoryFilter({
           className={`rounded-full px-5 py-2 text-sm font-medium transition-all duration-200 cursor-pointer ${
             activeCategory === cat.key
               ? "bg-linear-to-r from-nx-purple to-nx-blue text-white shadow-lg shadow-nx-purple/20"
-              : "border border-white/10 bg-white/5 text-zinc-400 hover:border-nx-purple/30 hover:text-white"
+              : "border border-border bg-card/80 text-muted-foreground hover:border-nx-purple/40 hover:text-foreground shadow-xs dark:border-white/10 dark:bg-white/5 dark:text-zinc-400 dark:hover:border-nx-purple/30 dark:hover:text-white"
           }`}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}

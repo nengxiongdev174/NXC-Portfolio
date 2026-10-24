@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { LogoBrand } from "@/components/shared/LogoBrand";
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
+import { ThemeToggle } from "@/components/shared/ThemeToggle";
 import { useLanguage } from "@/context/LanguageContext";
 import { MobileMenu } from "./MobileMenu";
 
@@ -32,7 +33,7 @@ export function Navbar(): JSX.Element {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-black/80 backdrop-blur-md border-b border-nx-purple/20"
+          ? "bg-background/80 backdrop-blur-md border-b border-border shadow-xs dark:border-nx-purple/20"
           : "bg-transparent"
       }`}
     >
@@ -41,12 +42,12 @@ export function Navbar(): JSX.Element {
         <LogoBrand href="#" />
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+        <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-600 dark:text-zinc-400">
           {navLinks.map((item) => (
             <li key={item.key} className="relative">
               <motion.a
                 href={item.href}
-                className="relative block py-1 transition-colors hover:text-white"
+                className="relative block py-1 transition-colors hover:text-zinc-950 dark:hover:text-white"
                 whileHover="hover"
                 initial="rest"
                 animate="rest"
@@ -65,22 +66,24 @@ export function Navbar(): JSX.Element {
           ))}
         </ul>
 
-        {/* Desktop Actions: Language Switcher + CTA */}
-        <div className="hidden md:flex items-center gap-4">
+        {/* Desktop Actions: Theme Toggle + Language Switcher + CTA */}
+        <div className="hidden md:flex items-center gap-3">
+          <ThemeToggle />
           <LanguageSwitcher />
           <Button
             asChild
-            className="rounded-full bg-linear-to-r from-nx-purple to-nx-blue px-5 py-2 text-sm font-semibold text-white transition-transform hover:scale-105 cursor-pointer"
+            className="rounded-full bg-linear-to-r from-nx-purple to-nx-blue px-5 py-2 text-sm font-semibold text-white transition-transform hover:scale-105 cursor-pointer shadow-xs shadow-nx-purple/20"
           >
             <a href="#contact">{t("nav.contactCta")}</a>
           </Button>
         </div>
 
         {/* Mobile menu button & quick switcher */}
-        <div className="flex md:hidden items-center gap-3">
+        <div className="flex md:hidden items-center gap-2.5">
+          <ThemeToggle isMobile />
           <LanguageSwitcher isMobile />
           <button
-            className="text-white p-1 cursor-pointer"
+            className="text-foreground p-1 cursor-pointer"
             aria-label="Menu"
             onClick={() => setMenuOpen(!menuOpen)}
           >

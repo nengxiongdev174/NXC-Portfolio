@@ -96,4 +96,8 @@ export interface TranslationSchema {
     tagline: string;
     allRightsReserved: string;
   };
+  theme: {
+    toggleToDark: string;
+    toggleToLight: string;
+  };
 }

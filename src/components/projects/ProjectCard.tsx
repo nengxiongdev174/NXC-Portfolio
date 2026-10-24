@@ -36,8 +36,8 @@ export function ProjectCard({
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.4, delay: index * 0.07, ease: "easeOut" }}
-      className="group relative overflow-hidden rounded-xl border border-white/8 bg-zinc-900/60 backdrop-blur-sm"
-      whileHover={{ y: -4, borderColor: "rgba(147,51,234,0.3)" }}
+      className="group relative overflow-hidden rounded-xl border border-border bg-card/90 backdrop-blur-sm shadow-xs transition-all duration-300 hover:shadow-md dark:border-white/8 dark:bg-zinc-900/60"
+      whileHover={{ y: -4, borderColor: "rgba(147,51,234,0.4)" }}
     >
       {/* Thumbnail area */}
       <div className={`relative h-44 bg-gradient-to-br ${project.gradient} overflow-hidden`}>
@@ -59,7 +59,7 @@ export function ProjectCard({
         />
 
         {/* Year badge */}
-        <div className="absolute top-3 right-3 rounded-full border border-white/10 bg-black/40 px-2.5 py-1 font-mono text-[10px] text-zinc-400 backdrop-blur-sm">
+        <div className="absolute top-3 right-3 rounded-full border border-border/60 bg-background/70 px-2.5 py-1 font-mono text-[10px] text-muted-foreground backdrop-blur-sm dark:border-white/10 dark:bg-black/40 dark:text-zinc-400">
           {project.year}
         </div>
 
@@ -116,13 +116,13 @@ export function ProjectCard({
 
       {/* Content */}
       <div className="p-5">
-        <h3 className="mb-1 font-semibold text-white group-hover:text-nx-purple transition-colors duration-200">
+        <h3 className="mb-1 font-semibold text-foreground group-hover:text-nx-purple transition-colors duration-200">
           {title}
         </h3>
         {locale !== "en" && (
-          <p className="mb-1 font-mono text-[11px] text-zinc-500">{project.titleEn}</p>
+          <p className="mb-1 font-mono text-[11px] text-muted-foreground">{project.titleEn}</p>
         )}
-        <p className="mt-2 text-sm leading-relaxed text-zinc-400 line-clamp-2">
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground line-clamp-2">
           {description}
         </p>
 
@@ -131,7 +131,7 @@ export function ProjectCard({
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-white/8 bg-white/4 px-2.5 py-0.5 font-mono text-[10px] text-zinc-500"
+              className="rounded-full border border-border bg-muted/50 px-2.5 py-0.5 font-mono text-[10px] text-muted-foreground dark:border-white/8 dark:bg-white/4"
             >
               {tag}
             </span>

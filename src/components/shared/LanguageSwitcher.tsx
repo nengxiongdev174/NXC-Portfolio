@@ -26,7 +26,7 @@ export function LanguageSwitcher({
     <div
       role="group"
       aria-label="Language selector"
-      className={`relative inline-flex items-center rounded-full border border-white/10 bg-zinc-950/80 p-1 backdrop-blur-md shadow-inner ${className}`}
+      className={`relative inline-flex items-center rounded-full border border-border bg-card/80 p-1 backdrop-blur-md shadow-xs dark:border-white/10 dark:bg-zinc-950/80 ${className}`}
     >
       {languages.map((lang) => {
         const isActive = locale === lang.code;
@@ -44,7 +44,7 @@ export function LanguageSwitcher({
             } ${
               isActive
                 ? "text-white font-semibold"
-                : "text-zinc-400 hover:text-zinc-200"
+                : "text-muted-foreground hover:text-foreground dark:text-zinc-400 dark:hover:text-zinc-200"
             }`}
           >
             {/* Sliding highlight indicator */}

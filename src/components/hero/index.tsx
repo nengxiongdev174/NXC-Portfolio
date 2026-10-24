@@ -71,7 +71,7 @@ export function Hero(): JSX.Element {
         </motion.h1>
 
         <motion.h2
-          className="mb-6 text-2xl font-semibold tracking-widest text-zinc-300 sm:text-3xl md:text-4xl"
+          className="mb-6 text-2xl font-semibold tracking-widest text-zinc-800 dark:text-zinc-300 sm:text-3xl md:text-4xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.38 }}
@@ -80,7 +80,7 @@ export function Hero(): JSX.Element {
         </motion.h2>
 
         <motion.p
-          className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-zinc-400"
+          className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-zinc-600 dark:text-zinc-400"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
@@ -97,7 +97,7 @@ export function Hero(): JSX.Element {
         >
           <motion.a
             href="#projects"
-            className="inline-flex items-center justify-center rounded-full bg-linear-to-r from-nx-purple to-nx-blue px-8 py-4 text-base font-semibold text-white"
+            className="inline-flex items-center justify-center rounded-full bg-linear-to-r from-nx-purple to-nx-blue px-8 py-4 text-base font-semibold text-white shadow-md shadow-nx-purple/25"
             whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(147,51,234,0.5)" }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -106,8 +106,8 @@ export function Hero(): JSX.Element {
           </motion.a>
           <motion.a
             href="#contact"
-            className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm"
-            whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(147,51,234,0.4)" }}
+            className="inline-flex items-center justify-center rounded-full border border-border bg-card/70 px-8 py-4 text-base font-semibold text-foreground backdrop-blur-sm shadow-xs transition-colors hover:bg-muted dark:border-white/20 dark:bg-white/5 dark:text-white dark:hover:bg-white/10"
+            whileHover={{ scale: 1.05, borderColor: "rgba(147,51,234,0.4)" }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >

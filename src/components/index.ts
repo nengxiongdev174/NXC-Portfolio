@@ -11,3 +11,4 @@ export { Contact } from "./contact";
 export { Footer } from "./shared/Footer";
 export { LogoBrand } from "./shared/LogoBrand";
 export { LanguageSwitcher } from "./shared/LanguageSwitcher";
+export { ThemeToggle } from "./shared/ThemeToggle";

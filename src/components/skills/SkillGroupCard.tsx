@@ -14,12 +14,12 @@ export function SkillGroupCard({
 }): JSX.Element {
   return (
     <motion.div
-      className="relative overflow-hidden rounded-xl border border-white/8 bg-zinc-900/60 p-6 backdrop-blur-sm"
+      className="relative overflow-hidden rounded-xl border border-border bg-card/90 p-6 backdrop-blur-sm shadow-xs transition-all duration-300 hover:shadow-md dark:border-white/8 dark:bg-zinc-900/60"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ borderColor: `${group.color}44`, backgroundColor: "rgba(24,24,27,0.8)" }}
+      whileHover={{ borderColor: `${group.color}66`, scale: 1.01 }}
     >
       {/* Corner decoration */}
       <div
@@ -40,8 +40,8 @@ export function SkillGroupCard({
           {group.icon}
         </div>
         <div>
-          <h3 className="font-semibold text-white">{group.category}</h3>
-          <p className="font-mono text-[10px] tracking-widest text-zinc-600">
+          <h3 className="font-semibold text-foreground">{group.category}</h3>
+          <p className="font-mono text-[10px] tracking-widest text-muted-foreground">
             {group.skills.length} SKILLS
           </p>
         </div>

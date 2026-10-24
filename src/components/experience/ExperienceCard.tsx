@@ -77,11 +77,10 @@ export function ExperienceCard({
         transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
       >
         <motion.div
-          className="group relative overflow-hidden rounded-xl border border-white/8 bg-zinc-900/70 p-6 md:p-7 backdrop-blur-sm transition-all duration-300"
+          className="group relative overflow-hidden rounded-xl border border-border bg-card/90 p-6 md:p-7 backdrop-blur-sm shadow-xs transition-all duration-300 hover:shadow-md dark:border-white/8 dark:bg-zinc-900/70"
           whileHover={{
             y: -4,
-            borderColor: `${item.accentColor}55`,
-            backgroundColor: "rgba(24,24,27,0.85)",
+            borderColor: `${item.accentColor}66`,
             boxShadow: `0 12px 30px -10px ${item.accentColor}25`,
           }}
         >
@@ -117,14 +116,14 @@ export function ExperienceCard({
               {item.period}
             </span>
 
-            <span className="inline-flex items-center gap-1 font-mono text-[11px] text-zinc-500">
+            <span className="inline-flex items-center gap-1 font-mono text-[11px] text-muted-foreground">
               <MapPin size={12} />
               {item.location}
             </span>
           </div>
 
           {/* Role and Company */}
-          <h3 className="text-xl font-bold text-white transition-colors duration-200 group-hover:text-white">
+          <h3 className="text-xl font-bold text-foreground transition-colors duration-200">
             {role}
           </h3>
           <p
@@ -135,20 +134,20 @@ export function ExperienceCard({
           </p>
 
           {/* Summary */}
-          <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
             {description}
           </p>
 
           {/* Highlights */}
-          <div className="mt-4 border-t border-white/5 pt-4">
-            <p className="mb-2.5 font-mono text-[10px] tracking-widest text-zinc-500 uppercase">
+          <div className="mt-4 border-t border-border pt-4 dark:border-white/5">
+            <p className="mb-2.5 font-mono text-[10px] tracking-widest text-muted-foreground uppercase">
               // {t("experience.keyAchievements")}
             </p>
             <ul className="space-y-2">
               {highlights.map((highlight, hIdx) => (
                 <li
                   key={hIdx}
-                  className="flex items-start gap-2.5 text-xs leading-relaxed text-zinc-300"
+                  className="flex items-start gap-2.5 text-xs leading-relaxed text-foreground/90 dark:text-zinc-300"
                 >
                   <CheckCircle2
                     size={14}
@@ -166,7 +165,7 @@ export function ExperienceCard({
             {item.technologies.map((tech) => (
               <span
                 key={tech}
-                className="rounded-full border border-white/6 bg-white/3 px-2.5 py-0.5 font-mono text-[10px] text-zinc-400 transition-colors group-hover:border-white/10 group-hover:text-zinc-200"
+                className="rounded-full border border-border bg-muted/50 px-2.5 py-0.5 font-mono text-[10px] text-muted-foreground transition-colors group-hover:border-border/80 group-hover:text-foreground dark:border-white/6 dark:bg-white/3 dark:text-zinc-400 dark:group-hover:border-white/10 dark:group-hover:text-zinc-200"
               >
                 {tech}
               </span>

@@ -31,7 +31,7 @@ export function CyberInput({
       <label
         htmlFor={id}
         className={`mb-2 block text-sm font-medium transition-colors duration-200 ${
-          active ? "text-white" : "text-zinc-400"
+          active ? "text-foreground font-semibold" : "text-muted-foreground"
         }`}
       >
         {label}
@@ -46,11 +46,11 @@ export function CyberInput({
           onChange={onChange}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
-          className="w-full border-0 border-b bg-transparent pb-3 pt-1 text-sm text-white placeholder:text-zinc-700 focus:outline-none"
+          className="w-full border-0 border-b bg-transparent pb-3 pt-1 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none"
           style={{
             borderBottomColor: focused
-              ? "rgba(147,51,234,0.6)"
-              : "rgba(255,255,255,0.08)",
+              ? "rgba(147,51,234,0.7)"
+              : "var(--border)",
             transition: "border-color 0.25s",
           }}
         />

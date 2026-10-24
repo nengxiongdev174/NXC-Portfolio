@@ -10,19 +10,19 @@ export function Footer(): JSX.Element {
   const { t } = useLanguage();
 
   return (
-    <footer className="relative border-t border-white/6 px-6 pt-16 pb-8">
+    <footer className="relative border-t border-border dark:border-white/6 px-6 pt-16 pb-8">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 h-px w-32 bg-linear-to-r from-transparent via-nx-purple/40 to-transparent" />
 
       <div className="mx-auto max-w-6xl">
         <div className="mb-8 flex flex-col items-center justify-between gap-6 text-center sm:flex-row sm:text-left">
           <div>
             <LogoBrand animateOnView />
-            <p className="mt-1 text-sm text-zinc-500">
+            <p className="mt-1 text-sm text-muted-foreground">
               Nengxiong WANGTOUAXIONG
             </p>
           </div>
 
-          <div className="flex gap-6 text-sm text-zinc-500">
+          <div className="flex gap-6 text-sm text-muted-foreground">
             {[
               { label: "Facebook", href: "https://www.facebook.com/ChengLarXiong/" },
               { label: "GitHub", href: "https://github.com/nengxiongdev174" },
@@ -34,8 +34,8 @@ export function Footer(): JSX.Element {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors cursor-pointer"
-                whileHover={{ y: -2, color: "#ffffff" }}
+                className="transition-colors hover:text-foreground cursor-pointer"
+                whileHover={{ y: -2 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 {label}
@@ -44,9 +44,9 @@ export function Footer(): JSX.Element {
           </div>
         </div>
 
-        <Separator className="bg-white/10" />
+        <Separator className="bg-border dark:bg-white/10" />
 
-        <p className="mt-8 text-center text-sm text-zinc-700">
+        <p className="mt-8 text-center text-sm text-muted-foreground/80">
           &copy; {new Date().getFullYear()} Nengxiong WANGTOUAXIONG. {t("footer.allRightsReserved")}
         </p>
       </div>

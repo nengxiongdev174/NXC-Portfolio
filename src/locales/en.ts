@@ -97,4 +97,8 @@ export const en: TranslationSchema = {
     tagline: "Full-Stack Developer & Designer",
     allRightsReserved: "All rights reserved.",
   },
+  theme: {
+    toggleToDark: "Switch to dark mode",
+    toggleToLight: "Switch to light mode",
+  },
 };

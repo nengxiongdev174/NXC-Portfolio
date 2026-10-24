@@ -15,12 +15,12 @@ interface RoleCardProps {
 export function RoleCard({ role, index }: RoleCardProps): JSX.Element {
   return (
     <motion.div
-      className="group relative overflow-hidden rounded-xl border border-white/8 bg-zinc-900/60 p-5 backdrop-blur-sm"
+      className="group relative overflow-hidden rounded-xl border border-border bg-card/90 p-5 backdrop-blur-sm shadow-xs transition-all duration-300 hover:shadow-md dark:border-white/8 dark:bg-zinc-900/60"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ y: -3, borderColor: "rgba(147,51,234,0.3)" }}
+      whileHover={{ y: -3, borderColor: "rgba(147,51,234,0.4)" }}
     >
       {/* Spinning rings */}
       <div className="relative mb-4 h-14 w-14">
@@ -47,10 +47,10 @@ export function RoleCard({ role, index }: RoleCardProps): JSX.Element {
         </div>
       </div>
 
-      <h4 className="mb-1 text-sm font-semibold text-white group-hover:text-nx-purple transition-colors">
+      <h4 className="mb-1 text-sm font-semibold text-foreground group-hover:text-nx-purple transition-colors">
         {role.name}
       </h4>
-      <p className="text-xs leading-relaxed text-zinc-500">{role.desc}</p>
+      <p className="text-xs leading-relaxed text-muted-foreground">{role.desc}</p>
     </motion.div>
   );
 }

@@ -36,7 +36,7 @@ export function Skills(): JSX.Element {
             <span className="gradient-text">{t("skills.headingHighlight")}</span>
           </motion.h2>
           <motion.p
-            className="mx-auto max-w-lg text-sm text-zinc-500"
+            className="mx-auto max-w-lg text-sm text-muted-foreground"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
