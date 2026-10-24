@@ -36,6 +36,13 @@ export function ExperienceCard({
       ? item.highlightsLo
       : item.highlightsEn;
 
+  const company =
+    locale === "th" && item.companyTh
+      ? item.companyTh
+      : locale === "lo" && item.companyLo
+      ? item.companyLo
+      : item.company;
+
   const isEven = index % 2 === 0;
 
   return (
@@ -130,7 +137,7 @@ export function ExperienceCard({
             className="mt-0.5 font-mono text-xs font-semibold tracking-wide"
             style={{ color: item.accentColor }}
           >
-            {item.company}
+            {company}
           </p>
 
           {/* Summary */}

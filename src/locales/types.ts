@@ -40,6 +40,22 @@ export interface TranslationSchema {
     bioCardTitle: string;
     bioP1: string;
     bioP2: string;
+    locationLabel: string;
+    locationValue: string;
+    education: {
+      title: string;
+      institution: string;
+      degree: string;
+      graduatedYear: string;
+    };
+    languages: {
+      title: string;
+      items: Array<{
+        name: string;
+        level: string;
+        score: number;
+      }>;
+    };
     roles: Array<{
       emoji: string;
       name: string;
@@ -64,6 +80,8 @@ export interface TranslationSchema {
     };
     liveDemo: string;
     sourceCode: string;
+    showMore: string;
+    showLess: string;
   };
   skills: {
     badge: string;

@@ -18,7 +18,7 @@ export function Footer(): JSX.Element {
           <div>
             <LogoBrand animateOnView />
             <p className="mt-1 text-sm text-muted-foreground">
-              Nengxiong WANGTOUAXIONG
+              Nengxiong WANGTUANXIONG
             </p>
           </div>
 
@@ -26,7 +26,7 @@ export function Footer(): JSX.Element {
             {[
               { label: "Facebook", href: "https://www.facebook.com/ChengLarXiong/" },
               { label: "GitHub", href: "https://github.com/nengxiongdev174" },
-              { label: "WhatsApp", href: "https://api.whatsapp.com/send?phone=8562057492472" },
+              { label: "WhatsApp", href: "https://api.whatsapp.com/send?phone=8562077426238" },
               { label: "Line", href: "https://line.me/ti/p/BNpe9xpQkL" },
             ].map(({ label, href }) => (
               <motion.a
@@ -47,7 +47,7 @@ export function Footer(): JSX.Element {
         <Separator className="bg-border dark:bg-white/10" />
 
         <p className="mt-8 text-center text-sm text-muted-foreground/80">
-          &copy; {new Date().getFullYear()} Nengxiong WANGTOUAXIONG. {t("footer.allRightsReserved")}
+          &copy; {new Date().getFullYear()} Nengxiong WANGTUANXIONG. {t("footer.allRightsReserved")}
         </p>
       </div>
     </footer>

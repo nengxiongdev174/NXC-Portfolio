@@ -19,7 +19,7 @@ const cvList: CvItem[] = [
     code: "en",
     label: "English CV",
     nativeLabel: "International Edition",
-    href: "/nengxiong-wtx-cv-en.pdf",
+    href: "/nengxiong-wtx-cv-eng.pdf",
     downloadName: "Nengxiong_CV_EN.pdf",
   },
   {
@@ -89,11 +89,10 @@ export function CvDownloadActions(): JSX.Element {
                 damping: 26,
               }}
               onClick={() => selectCv(cv.code)}
-              className={`relative overflow-hidden rounded-2xl border p-4 backdrop-blur-md transition-colors duration-300 text-left flex flex-col justify-between cursor-pointer select-none ${
-                isSelected
-                  ? "z-10 border-nx-purple/70 bg-card/95 shadow-xl shadow-nx-purple/20 ring-2 ring-nx-purple/50 dark:bg-zinc-900/95"
-                  : "z-0 border-border bg-card/75 hover:border-nx-purple/40 hover:bg-card shadow-xs dark:border-white/8 dark:bg-zinc-950/60 dark:hover:bg-zinc-900/50"
-              }`}
+              className={`relative overflow-hidden rounded-2xl border p-4 backdrop-blur-md transition-colors duration-300 text-left flex flex-col justify-between cursor-pointer select-none ${isSelected
+                ? "z-10 border-nx-purple/70 bg-card/95 shadow-xl shadow-nx-purple/20 ring-2 ring-nx-purple/50 dark:bg-zinc-900/95"
+                : "z-0 border-border bg-card/75 hover:border-nx-purple/40 hover:bg-card shadow-xs dark:border-white/8 dark:bg-zinc-950/60 dark:hover:bg-zinc-900/50"
+                }`}
             >
               <AnimatePresence>
                 {isSelected && (
@@ -114,11 +113,10 @@ export function CvDownloadActions(): JSX.Element {
               <div>
                 <div className="flex items-center gap-2.5 mb-2">
                   <span
-                    className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg font-mono text-xs font-bold ${
-                      isSelected
-                        ? "bg-linear-to-br from-nx-purple to-nx-blue text-white shadow-xs"
-                        : "bg-muted text-foreground/80 dark:bg-white/10 dark:text-zinc-300"
-                    }`}
+                    className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg font-mono text-xs font-bold ${isSelected
+                      ? "bg-linear-to-br from-nx-purple to-nx-blue text-white shadow-xs"
+                      : "bg-muted text-foreground/80 dark:bg-white/10 dark:text-zinc-300"
+                      }`}
                   >
                     {cv.code.toUpperCase()}
                   </span>
@@ -160,11 +158,10 @@ export function CvDownloadActions(): JSX.Element {
                     selectCv(cv.code);
                   }}
                   title={`${t("experience.downloadCv")} (${cv.label})`}
-                  className={`flex-1 inline-flex items-center justify-center gap-1.5 rounded-lg px-2.5 py-2 text-xs font-semibold transition-all cursor-pointer ${
-                    isSelected
-                      ? "bg-linear-to-r from-nx-purple to-nx-blue text-white shadow-md shadow-nx-purple/25 hover:brightness-110"
-                      : "bg-muted text-foreground hover:bg-muted/80 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
-                  }`}
+                  className={`flex-1 inline-flex items-center justify-center gap-1.5 rounded-lg px-2.5 py-2 text-xs font-semibold transition-all cursor-pointer ${isSelected
+                    ? "bg-linear-to-r from-nx-purple to-nx-blue text-white shadow-md shadow-nx-purple/25 hover:brightness-110"
+                    : "bg-muted text-foreground hover:bg-muted/80 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
+                    }`}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >

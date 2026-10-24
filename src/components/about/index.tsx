@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import { BioCard } from "./BioCard";
 import { RoleCard } from "./RoleCard";
+import { EducationCard } from "./EducationCard";
+import { LanguagesCard } from "./LanguagesCard";
 
 export function About(): JSX.Element {
   const { dictionary, t } = useLanguage();
@@ -37,15 +39,20 @@ export function About(): JSX.Element {
           </motion.h2>
         </div>
 
-        <div className="grid gap-16 lg:grid-cols-2 lg:items-start">
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           {/* Left — Personal Bio */}
           <BioCard />
 
-          {/* Right — Roles */}
-          <div className="grid gap-4 sm:grid-cols-2">
-            {dictionary.about.roles.map((role, i) => (
-              <RoleCard key={role.name} role={role} index={i} />
-            ))}
+          {/* Right — Roles, Academic Education, and Languages */}
+          <div className="space-y-6">
+            <div className="grid gap-4 sm:grid-cols-2">
+              {dictionary.about.roles.map((role, i) => (
+                <RoleCard key={role.name} role={role} index={i} />
+              ))}
+            </div>
+
+            <EducationCard />
+            <LanguagesCard />
           </div>
         </div>
       </div>
