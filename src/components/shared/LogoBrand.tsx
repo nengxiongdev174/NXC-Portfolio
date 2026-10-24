@@ -13,7 +13,7 @@ export function LogoBrand({ href = "#", animateOnView = false }: LogoBrandProps)
   return (
     <motion.a
       href={href}
-      className="flex items-baseline gap-2"
+      className="flex items-baseline gap-1.5 sm:gap-2 shrink-0"
       whileHover={{ filter: "drop-shadow(0 0 14px rgba(147,51,234,0.6))" }}
       transition={{ duration: 0.2 }}
     >

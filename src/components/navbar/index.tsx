@@ -33,16 +33,16 @@ export function Navbar(): JSX.Element {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-border shadow-xs dark:border-nx-purple/20"
-          : "bg-transparent"
+          ? "bg-background/85 backdrop-blur-md border-b border-border shadow-xs dark:border-nx-purple/20"
+          : "bg-background/60 backdrop-blur-md border-b border-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
         {/* Logo */}
         <LogoBrand href="#" />
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-600 dark:text-zinc-400">
+        {/* Desktop Menu (lg+) */}
+        <ul className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium text-zinc-600 dark:text-zinc-400">
           {navLinks.map((item) => (
             <li key={item.key} className="relative">
               <motion.a
@@ -66,8 +66,8 @@ export function Navbar(): JSX.Element {
           ))}
         </ul>
 
-        {/* Desktop Actions: Theme Toggle + Language Switcher + CTA */}
-        <div className="hidden md:flex items-center gap-3">
+        {/* Desktop Actions (lg+): Theme Toggle + Language Switcher + CTA */}
+        <div className="hidden lg:flex items-center gap-3">
           <ThemeToggle />
           <LanguageSwitcher />
           <Button
@@ -78,8 +78,8 @@ export function Navbar(): JSX.Element {
           </Button>
         </div>
 
-        {/* Mobile menu button & quick switcher */}
-        <div className="flex md:hidden items-center gap-2.5">
+        {/* Mobile & Tablet controls (<lg) */}
+        <div className="flex lg:hidden items-center gap-2 sm:gap-2.5">
           <ThemeToggle isMobile />
           <LanguageSwitcher isMobile />
           <button

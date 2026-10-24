@@ -16,7 +16,7 @@ export function HeroStats(): JSX.Element {
 
   return (
     <motion.div
-      className="mt-16 grid grid-cols-2 gap-6 sm:grid-cols-4"
+      className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-2 gap-3.5 sm:gap-6 sm:grid-cols-4"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.85 }}

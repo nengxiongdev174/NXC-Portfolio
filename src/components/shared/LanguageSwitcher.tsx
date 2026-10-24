@@ -39,7 +39,7 @@ export function LanguageSwitcher({
             title={lang.name}
             className={`relative z-10 flex items-center justify-center rounded-full font-mono font-medium transition-colors duration-200 cursor-pointer ${
               isMobile
-                ? "px-3.5 py-1.5 text-xs"
+                ? "px-2.5 py-1 text-[11px]"
                 : "px-2.5 py-1 text-[11px]"
             } ${
               isActive

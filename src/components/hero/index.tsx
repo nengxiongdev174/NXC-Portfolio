@@ -20,7 +20,7 @@ export function Hero(): JSX.Element {
   const { t } = useLanguage();
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6">
+    <section className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden px-4 sm:px-6 pt-24 pb-16 sm:pt-28 sm:pb-20 md:pt-32 md:pb-24">
       <div className="cyber-grid pointer-events-none absolute inset-0" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.12),transparent_65%)]" />
 

@@ -27,9 +27,7 @@ export function ThemeToggle({
       onClick={toggleTheme}
       aria-label={title}
       title={title}
-      className={`relative inline-flex items-center justify-center rounded-full border border-border bg-card/80 text-foreground backdrop-blur-md transition-colors duration-200 hover:bg-muted hover:text-foreground cursor-pointer shadow-xs ${
-        isMobile ? "h-9 w-9" : "h-8 w-8"
-      } ${className}`}
+      className={`relative inline-flex items-center justify-center rounded-full border border-border bg-card/80 text-foreground backdrop-blur-md transition-colors duration-200 hover:bg-muted hover:text-foreground cursor-pointer shadow-xs h-8 w-8 ${className}`}
     >
       <span className="sr-only">{title}</span>
       {mounted ? (
